@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    发生大法师法师法师法师
+    <div>
+        <button onclick="one()">one</button>
+    </div>
+    <button onclick="more()">more</button>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        // for(var i = 0;i<100;i++){
+        //     $.get(
+        //         "/user/create",
+        //         {
+        //             name:"luqi"+i,
+        //             age:i
+        //         },
+        //         function(d){
+        //             console.log(d)
+        //         },"json"
+        //     )
+        // }
+        function one(){
+            $.post(
+                    "/user/update",
+                    {id:1},
+                    function(d){
+                        console.log(d)
+                    },"json"
+                );
+        }
+        function more(){
+            for(var i = 0;i<100;i++){
+                $.post(
+                    "/user/update",
+                    {id:1},
+                    function(d){
+                        console.log(d)
+                    },"json"
+                );
+            }
+        }
+        
+
+
+
+        // $.post(
+        //         "/user/test",
+        //         {id:1},
+        //         function(d){
+        //             console.log(d)
+        //         },"json"
+        //     );
+    </script>
+</body>
+</html>
